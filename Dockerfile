@@ -14,4 +14,4 @@ RUN wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.t
     rm ffmpeg-release-amd64-static.tar.xz &&\
     mv /ffmpeg-4.3.2-amd64-static/ff* /usr/sbin/
 
-RUN ffmpeg --version
+CMD ["ffmpeg", "-version"]
