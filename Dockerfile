@@ -1,5 +1,5 @@
 # Node14.13.1-alpine3.10 + ffmpeg4.3.2
-FROM node:14.13.1-alpine3.10
+FROM node:15.12.0-alpine3.11
 
 ENV TZ Asia/Taipei
 
@@ -14,4 +14,4 @@ RUN wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.t
     rm ffmpeg-release-amd64-static.tar.xz &&\
     mv /ffmpeg-4.3.2-amd64-static/ff* /usr/sbin/
 
-CMD ["ffmpeg", "--version"]
+RUN ffmpeg --version
